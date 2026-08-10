@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://c00j5nf88whfj"]
+
+[ext_resource type="Texture2D" uid="uid://dforqi1j5e2lp" path="res://assets/Screenshot_20260804_225029.png" id="1_e75xd"]
+[ext_resource type="FontFile" uid="uid://bbqb28g8gdh6g" path="res://assets/Celtica-Bold.ttf" id="2_cix2y"]
+[ext_resource type="PackedScene" uid="uid://ufyq6aqmuph7" path="res://transition_tile.tscn" id="3_p60r3"]
+[ext_resource type="FontFile" uid="uid://bne5srb1p11ey" path="res://assets/Celtica-Book.ttf" id="4_cix2y"]
+[ext_resource type="AudioStream" uid="uid://cb5t1rephq734" path="res://assets/Alexander Nakarada - Towards The Horizon.mp3" id="5_p60r3"]
+[ext_resource type="Texture2D" uid="uid://do7vhkfac3nar" path="res://assets/medieval-map-of-ireland-v0-3axdbsfvfj321.jpg" id="6_tqjn2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tqjn2"]
+texture = ExtResource("1_e75xd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5h7g"]
+texture = ExtResource("6_tqjn2")
+
+[node name="End&Credits" type="Control" unique_id=1235605948]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="." unique_id=889689795]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tqjn2")
+
+[node name="EndTitleCard" type="Label" parent="." unique_id=1800585661]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -389.0
+offset_top = -293.5
+offset_right = 389.0
+offset_bottom = -170.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.1882353, 0.21176471, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("2_cix2y")
+theme_override_font_sizes/font_size = 100
+text = "AN DEIREADH"
+
+[node name="Endinenglish" type="Label" parent="EndTitleCard" unique_id=2139556782]
+layout_mode = 0
+offset_left = 368.0
+offset_top = -7.5
+offset_right = 428.0
+offset_bottom = 15.5
+theme_override_colors/font_color = Color(0.1882353, 0.21176471, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("2_cix2y")
+text = "the end"
+
+[node name="Transition Tile" parent="." unique_id=1351688662 instance=ExtResource("3_p60r3")]
+visible = false
+position = Vector2(-627, -299)
+
+[node name="Credits" type="Label" parent="." unique_id=2032295384]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 204.0
+offset_right = 937.0
+offset_bottom = 303.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_cix2y")
+theme_override_font_sizes/font_size = 38
+text = "Déanta le grá ag (made with love by):
+Marcelo A.K.A. GoedheligmanMymy"
+
+[node name="MusicCredits" type="Label" parent="." unique_id=1003196735]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 506.0
+offset_right = 583.0
+offset_bottom = 659.0
+theme_override_colors/font_color = Color(0.75533074, 0.00012369602, 0.6446565, 1)
+theme_override_fonts/font = ExtResource("4_cix2y")
+text = "Ceol le (music by):
+Song: Towards The Horizon
+Composer: Alexander Nakarada
+Website: https://creatorchords.com/
+License: Free To Use YouTube license youtube-free
+Music powered by BreakingCopyright: https://breakingcopyright.com"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1814504803]
+stream = ExtResource("5_p60r3")
+autoplay = true
+bus = &"Music"
+
+[node name="Panel" type="Panel" parent="." unique_id=1357802647]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 435.0
+offset_top = 121.0
+offset_right = 566.6555
+offset_bottom = 291.07568
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_j5h7g")

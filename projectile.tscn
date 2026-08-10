@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cyknfhk3rmf0q"]
+
+[ext_resource type="Script" uid="uid://de5e82gdk0wk7" path="res://projectile.gd" id="1_qxf0c"]
+[ext_resource type="Texture2D" uid="uid://bnxnqqb3w6ym1" path="res://assets/fireballprojectile.png" id="2_qxf0c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dgwo2"]
+radius = 5.0
+
+[node name="projectile" type="CharacterBody2D" unique_id=109524482 groups=["projectiles"]]
+light_mask = 33
+visibility_layer = 33
+script = ExtResource("1_qxf0c")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=642818043]
+light_mask = 33
+visibility_layer = 33
+position = Vector2(0, 1.1920929e-07)
+scale = Vector2(0.3, 0.289)
+texture = ExtResource("2_qxf0c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=809495931 groups=["projectiles"]]
+light_mask = 32
+visibility_layer = 32
+shape = SubResource("CircleShape2D_dgwo2")

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ddu4g2gf60ll7"]
+
+[ext_resource type="Script" uid="uid://dtjxcjj1go6rn" path="res://kill_zone_flat.gd" id="1_l3ali"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_niu10"]
+size = Vector2(135, 20)
+
+[node name="Spikesorsmth" type="Area2D" unique_id=440557259]
+script = ExtResource("1_l3ali")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1900364311]
+shape = SubResource("RectangleShape2D_niu10")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

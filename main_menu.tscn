@@ -1,0 +1,264 @@
+[gd_scene format=3 uid="uid://c08a75honh0n1"]
+
+[ext_resource type="Texture2D" uid="uid://dforqi1j5e2lp" path="res://assets/Screenshot_20260804_225029.png" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://b6yr61xpb3cc6" path="res://main_menu.gd" id="1_jix8l"]
+[ext_resource type="FontFile" uid="uid://doavdoaaqc33t" path="res://assets/Celtica-BookOblique.ttf" id="2_fu7sn"]
+[ext_resource type="FontFile" uid="uid://bbqb28g8gdh6g" path="res://assets/Celtica-Bold.ttf" id="3_jix8l"]
+[ext_resource type="AudioStream" uid="uid://cb5t1rephq734" path="res://assets/Alexander Nakarada - Towards The Horizon.mp3" id="5_glbon"]
+[ext_resource type="Script" uid="uid://brbu8vf0vms3e" path="res://audio_control.gd" id="5_nlkkf"]
+[ext_resource type="FontFile" uid="uid://bne5srb1p11ey" path="res://assets/Celtica-Book.ttf" id="6_qe12f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
+texture = ExtResource("1_06t4h")
+modulate_color = Color(0.8778419, 0.88593924, 0.8324695, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
+bg_color = Color(0.34117648, 0.13725491, 0.11372549, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8001047, 0.72353405, 0.34619862, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0.87058824, 0, 0.1882353, 0.10980392)
+shadow_size = 10
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0.72763795, 0.3472847, 0.30114016, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
+bg_color = Color(0.3529412, 0.14509805, 0.11764706, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fu7sn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
+bg_color = Color(0.7294118, 0.34901962, 0.3019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlkkf"]
+bg_color = Color(0.35463026, 0.144166, 0.11936767, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jix8l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe12f"]
+bg_color = Color(0.7294118, 0.34901962, 0.3019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qtwp"]
+bg_color = Color(0.3529412, 0.14509805, 0.11764706, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_glbon"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dy7ct"]
+bg_color = Color(0.43529412, 0.6745098, 0.34509805, 0.7529412)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_glbon"]
+color = Color(0.6105728, 0.4306955, 0.24092788, 1)
+thickness = 7
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_nlkkf"]
+color = Color(0.7607843, 0.5529412, 0.3372549, 1)
+thickness = 7
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_qe12f"]
+color = Color(0.7607843, 0.5529412, 0.3372549, 1)
+thickness = 7
+
+[node name="MainMenu" type="Control" unique_id=1934659351]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jix8l")
+
+[node name="Background" type="Panel" parent="." unique_id=1542616944]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7vrkn")
+
+[node name="Mainbuttons" type="VBoxContainer" parent="." unique_id=775666686]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -508.0
+offset_top = -75.0
+offset_right = -202.0
+offset_bottom = 305.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="Mainbuttons" unique_id=2112147616]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.59607846, 0.27450982, 0.25490198, 1)
+theme_override_fonts/font = ExtResource("2_fu7sn")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_glbon")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fu7sn")
+text = "Tosaigh
+(start)"
+
+[node name="Button2" type="Button" parent="Mainbuttons" unique_id=1942949967]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.59607846, 0.27450982, 0.25490198, 1)
+theme_override_fonts/font = ExtResource("2_fu7sn")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nlkkf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
+text = "Roghanna
+(options)"
+
+[node name="Button3" type="Button" parent="Mainbuttons" unique_id=208891148]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.59607846, 0.27450982, 0.25490198, 1)
+theme_override_fonts/font = ExtResource("2_fu7sn")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qe12f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qtwp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glbon")
+text = "Bealach amach
+(exit)"
+
+[node name="TitleCard" type="Label" parent="." unique_id=1136114790]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -505.0
+offset_top = 38.0
+offset_right = 185.0
+offset_bottom = 161.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.18869498, 0.21349224, 0.09317856, 1)
+theme_override_fonts/font = ExtResource("3_jix8l")
+theme_override_font_sizes/font_size = 100
+text = "Tine chnámh"
+
+[node name="Options" type="Panel" parent="." unique_id=1929417047]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -69.0
+offset_right = 467.0
+offset_bottom = 261.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dy7ct")
+
+[node name="LabelTitleoptions" type="Label" parent="Options" unique_id=1926281604]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 54.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.77156955, 0.4989463, 0.17402378, 1)
+theme_override_fonts/font = ExtResource("3_jix8l")
+theme_override_font_sizes/font_size = 39
+text = "    Roghanna         (options)"
+
+[node name="ExitOptions" type="Button" parent="Options" unique_id=2078945615]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -115.5
+offset_top = -86.0
+offset_right = 115.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.59607846, 0.27450982, 0.25490198, 1)
+theme_override_fonts/font = ExtResource("2_fu7sn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qe12f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qtwp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glbon")
+text = "Bealach amach
+(exit)"
+
+[node name="AudioControl" type="HSlider" parent="Options" unique_id=305926152]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 88.0
+offset_right = 403.0
+offset_bottom = 128.0
+theme_override_styles/slider = SubResource("StyleBoxLine_glbon")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_nlkkf")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_qe12f")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("5_nlkkf")
+audio_bus_name = "Music"
+
+[node name="AudioLabel" type="Label" parent="Options" unique_id=1836056129]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -163.0
+offset_top = 70.0
+offset_right = 164.0
+offset_bottom = 97.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.8796087, 0, 0.016775876, 1)
+theme_override_fonts/font = ExtResource("6_qe12f")
+theme_override_font_sizes/font_size = 21
+text = "Airde na ceoil (music's volume)"
+
+[node name="Label" type="Label" parent="Options" unique_id=908546391]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -13.0
+offset_right = 187.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.18956691, 0.18956691, 0.18956688, 1)
+theme_override_fonts/font = ExtResource("6_qe12f")
+theme_override_font_sizes/font_size = 26
+text = "Níl aon rud eile anseo, cad a 
+        bhí tú ag súil leis?"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1929901459]
+stream = ExtResource("5_glbon")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="Mainbuttons/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Mainbuttons/Button2" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Mainbuttons/Button3" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Options/ExitOptions" to="." method="_on_exit_options_pressed"]
+[connection signal="value_changed" from="Options/AudioControl" to="Options/AudioControl" method="_on_value_changed"]

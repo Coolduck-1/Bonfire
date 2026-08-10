@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cm6segkmwqkdj"]
+
+[ext_resource type="Script" uid="uid://dnxdepwrjiwwl" path="res://fire.gd" id="1_2pqqt"]
+
+[node name="fire" type="CharacterBody2D" unique_id=237344464]
+script = ExtResource("1_2pqqt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1523353417]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1349480648]
